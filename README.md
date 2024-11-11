@@ -1,14 +1,14 @@
 # smarthomepy
-_smarthomepy_ is system to manage a smart room in a house. First of all, an infrared distance sensor is placed on the ceiling of the room and is used to determine whether someone is inside the room or not. Based on both the occupancy of the room and the light measurements obtained by a photoresistor, _smarthomepy_ system turns on/off a smart light bulb. Furthermore, the room has a window on one side, equipped with a servo motor to open/close it based on the delta between the temperatures measured by two temperature sensors, one indoor and one outdoor (i.e., inside and outside the room). Finally, _smarthomepy_ checks for gas leaks inside the room through a gas sensor and then triggers an active buzzer when a gas leak is detected.
+_smarthomepy_ is system to manage a smart room in a house. An infrared distance sensor is placed on the ceiling of the room and is used to determine whether someone is inside the room or not. Based on both the occupancy of the room and the light measurement obtained by a photoresistor, _smarthomepy_ system turns on/off a smart lightbulb. Furthermore, the room has a window on one side, equipped with a servo motor to open/close it based on the delta between the temperatures measured by two temperature sensors, one indoor and one outdoor (i.e., inside and outside the room). Finally, _smarthomepy_ checks the CO2 level inside the room through a carbon dioxide sensor and then turns on/off the switch of an exhaust fan.
 
 To recap, the system includes the following sensors and actuators:
 * An infrared distance sensor located on the ceiling of the room.
-* A smart light bulb.
+* A smart lightbulb.
 * A photoresistor sensor to measure the light level inside the room.
 * A servo motor to open/close the window.
 * Two temperature sensors, one indoor and one outdoor, used in combination with the servo motor to open/close the window.
-* A gas sensor to check for gas leaks inside the room.
-* An active buzzer that is triggered when a gas leak is detected.
+* A carbon dioxide sensor to check the CO2 level inside the room.
+* An exhaust fan to control the CO2 level inside the room.
   
 The communication between the main board and the other components happens through GPIO pins. The communication is already configured in the BOARD mode (i.e., GPIO pins are referred to by their physical number on the board).
 
