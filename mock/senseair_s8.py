@@ -1,3 +1,4 @@
+# Mock library of https://github.com/ndoornekamp/senseair_s8
 class SenseairS8:
 
     def __init__(self, port="/dev/ttyS0", baudrate=9600, timeout=0.5):
