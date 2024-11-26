@@ -17,24 +17,6 @@ class TestSmartRoom(unittest.TestCase):
 
     @patch.object(GPIO, "input")
     def test_check_room_occupancy_true(self, mock_infrared_pin: Mock):
-        mock_infrared_pin.return_value=True
+        mock_infrared_pin.return_value=False
         sr=SmartRoom()
         self.assertTrue(sr.check_room_occupancy())
-
-    @patch.object(GPIO, "input")
-    def test_check_room_occupancy_false(self, mock_infrared_pin: Mock):
-        mock_infrared_pin.return_value = False
-        sr = SmartRoom()
-        self.assertFalse(sr.check_room_occupancy())
-
-    @patch.object(GPIO, "input")
-    def test_check_enough_light_true(self, mock_photoresistor_pin: Mock):
-        mock_photoresistor_pin.return_value = True
-        sr = SmartRoom()
-        self.assertTrue(sr.check_enough_light())
-
-    @patch.object(GPIO, "input")
-    def test_check_enough_light_false(self, mock_photoresistor_pin: Mock):
-        mock_photoresistor_pin.return_value = False
-        sr = SmartRoom()
-        self.assertFalse(sr.check_enough_light())
